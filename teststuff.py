@@ -1,15 +1,7 @@
-import numpy as np 
-
-# implement your function to combine two numpy arrays 
-
-def combination(n, m):
-    # delete the NotImplementedError when you write your function.
-    #raise NotImplementedError
-    pass
-
-
+import numpy as np
 if __name__ == "__main__":
-    # use this for your own testing!
+# use this for your own testing!
+    """
     a = np.arange(9)
     print(a)
     b = a.reshape(3,3)
@@ -40,3 +32,9 @@ if __name__ == "__main__":
     y = np.arange(10)
     mask = y%2 == 0
     print(y[mask])
+    """
+    a = (1,2)
+    b = a[0]
+    print(b)
+    b = a[1]
+    print(b)
