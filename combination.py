@@ -2,41 +2,29 @@ import numpy as np
 
 # implement your function to combine two numpy arrays 
 
-def combination(n, m):
+def combination(array0, array1, axis = 0):
     # delete the NotImplementedError when you write your function.
-    #raise NotImplementedError
-    pass
+    try:
+        #np.dtype(array0);
+        #np.dtype(array1);
+        array0 = np.squeeze(array0);
+        array1 = np.squeeze(array1);
+        print(array0);
+        print(array1);
+
+        a = np.concatenate((array0, array1));
+        print(a);
+        return a;
+        
+    except TypeError:
+        print("TypeError: You didn't give a fucking array as input. Change that NOW!")
+
 
 
 if __name__ == "__main__":
-    # use this for your own testing!
-    a = np.arange(9)
-    print(a)
-    b = a.reshape(3,3)
-    print(b)
-    c = np.arange(6)
-    b = c.reshape(2,3)
-    print(b)
-    b = c.reshape(3,2)
-    print(b[0][0])
-    print(b[0][1])
-    print("\n")
-    print(b[1][0])
-    print(b[1][1])
-    print("\n")
-    print(b[2][0])
-    print(b[2][1])
-    print(b)
-    
-    helpme = np.empty(shape = (8,6), dtype = np.bool_)
-   # helpme = helpme.reshape(6,8)
-    print(helpme)
- 
-    z = np.arange(100).reshape((10,10))
-    print(z)
-   # print(z[0:int(z.shape),0:8:2])
-    #print(z.shape)
-
-    y = np.arange(10)
-    mask = y%2 == 0
-    print(y[mask])
+    #a = np.arange(0,4);
+    #b = np.arange(5,7);
+    #print(a);
+    #print(b);
+    #combination(a, b);
+    pass
